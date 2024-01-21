@@ -14,8 +14,8 @@ git commit -m "Automatic Build Commit"
 
 git push -u origin dev
 
-echo Site build, copied and pushed to remote server successfully!
+echo Site build, copied and pushed to dev remote server successfully!
+start https://github.com/JAAKKQ/karkkainen.net/compare/main...dev?expand=1
 
-cmd /k
 timeout /t 5
 exit
