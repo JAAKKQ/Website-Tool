@@ -1,0 +1,337 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+//import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    id="hero"
+    title="Rene Karkkainen"
+    tagline="Personal Website"
+    actions={[{ variant: 'primary', target: '_blank', text: 'Hire me', href: '/' }]}
+  >
+    <Fragment slot="subtitle">
+      Finnish technology student at Business College Helsinki, with a background at WithSecure, a leading Nordic cyber
+      security company. Skilled in networking, cyber security, web development, and data analysis. Actively seeking
+      opportunities in IT from all over the world to contribute in enhancing system security.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-github',
+        callToAction: {
+          target: '_blank',
+          text: 'GitHub',
+          href: './r/github.html',
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'LinkedIn',
+          href: './r/linkedin.html',
+        },
+      },
+      {
+        icon: 'tabler:brand-x',
+        callToAction: {
+          target: '_blank',
+          text: 'X',
+          href: './r/x.html',
+        },
+      },
+    ]}
+    image={{
+      src: '~/assets/images/me.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h3>
+      <p>
+        Welcome to my digital abode! I'm Rene Karkkainen, a tech enthusiast and student navigating the ever-evolving
+        landscape of information technology. This platform serves as a hub for insights, experiences, and explorations
+        in the world of technology.
+      </p>
+      <br />
+      <p>Thank you for visiting!</p>
+      <br />
+      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Work experience"
+    items={[
+      {
+        title:
+          'Information Technology Trainee <br /> <span class="font-normal">WithSecure Oyj, Helsinki, Finland</span> <br /> <span class="text-sm font-normal">Oct - Dec 2023</span>',
+        description: `TBC`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Nursing Home Assistant <br /> <span class="font-normal">City of Helsinki, Helsinki, Finland</span> <br /> <span class="text-sm font-normal">Jun - Jul 2022</span>',
+        description: `Going for walks with the elderly, playing games together, reading magazines or books, assisting with office work or simply chatting and being present.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Store Assistant <br /> <span class="font-normal">K-Market Rekola, Vantaa, Finland</span> <br /> <span class="text-sm font-normal">Dec 2021</span>',
+        description: `Selling, unloading and checking shipments, customer service, and keeping the store clean.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Vocational qualification in Information and Communications Technology <br /> <span class="font-normal">Business School Helsinki</span> <br /> <span class="text-sm font-normal">2022 - 2025 </span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Technical Skills"
+    subtitle="Diving into the Tech Wonderland, I transform ideas into IT magic!"
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Network Administration',
+        description: 'Proven skills in configuring and maintaining secure and efficient network infrastructures.',
+      },
+      {
+        title: 'Cybersecurity',
+        description: 'Experienced in implementing robust security measures to protect against cyber threats.',
+      },
+      {
+        title: 'Server Environments',
+        description: 'Proficient in managing server environments, including setup, maintenance, and optimization.',
+      },
+      {
+        title: 'Linux Systems',
+        description: 'In-depth knowledge of Linux systems, including installation, configuration, and troubleshooting.',
+      },
+      {
+        title: 'Virtualization Technologies',
+        description: 'Skilled in using virtualization platforms like VMware ESXi for efficient resource utilization.',
+      },
+      {
+        title: 'IT Infrastructure',
+        description: 'Expertise in designing and maintaining reliable and scalable IT infrastructures.',
+      },
+      {
+        title: 'Scripting and Automation',
+        description: 'Adept at scripting languages to automate repetitive tasks and enhance workflow efficiency.',
+      },
+      {
+        title: 'Team Collaboration',
+        description: 'Proven ability to collaborate seamlessly with cross-functional teams for project success.',
+      },
+      {
+        title: 'Troubleshooting',
+        description:
+          'Effective problem-solving skills with a keen attention to detail for identifying and resolving issues.',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="Experiencing with Technology"
+    subtitle="Explore my tech playground, where bugs are features and laughter is the best debugging tool."
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Welcome to my Home Lab, a sanctuary for tech exploration and experimentation. From flushing Nokias down the toilet in my early years to now crafting intricate setups, this space is where ideas come to life. Join me as we unravel the mysteries of circuits, codes, and a touch of chaos.',
+      },
+      {
+        title: 'What I Learned:',
+        description:
+          'Throughout the journey of constructing my Home Lab, I gained valuable insights into networking, server management, and hardware configurations. The art of running servers, understanding how networks work, and the importance of adaptability in the tech landscape were among the many discoveries.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/server1.png',
+      alt: 'Image of my rack server',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '/home-lab',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Home Lab: <br /><span class="text-2xl">Where Ideas Take Flight</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Dive into the world of my crafted multiplayer FPS game, a creation born out of my love for gaming and the thrill of game development.',
+      },
+      {
+        title: 'What I Learned:',
+        description:
+          'Crafting this game wasn’t just about shooting enemies; it was a journey into the heart of Unreal Engine, networking challenges, and the magic of multiplayer dynamics.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/videogame.jpg',
+      alt: 'Image of the videogame',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '/videogame',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Videogame: <br /><span class="text-2xl">FPS Multiplayer made with Unreal Engine 4</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Embark on a journey through my coding ventures, where each line of code tells a story. From crafting intricate algorithms to solving complex challenges, coding is more than just a skill; it’s a canvas for creativity and problem-solving.',
+      },
+      {
+        title: 'What I Learned:',
+        description:
+          'In the realm of coding, comfort is key. I navigate through languages like Python, JavaScript, C#, HTML and beyond with ease, using them as tools to bring ideas to life. From exploring frameworks and libraries to tackling real-world problems, my coding journey is a continuous exploration of the ever-evolving tech landscape.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/spaghetti-code.jpg',
+      alt: 'A very delicious image of spaghetti.',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Coding: <br /><span class="text-2xl">A Glimpse into My Coding Journey</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget ***********
+
+  <Testimonials
+    title="Recomendations"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Let's work together"
+    subtitle="Seeking opportunities in IT from all over the world!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        href: '/contact',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`My personal corner of the internet where the digital and personal intertwine. Journey with me through the intricacies of IT, where every post is a chapter in the book of my projects, adventures, and the lessons learned along the way. `}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>
