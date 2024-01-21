@@ -8,7 +8,6 @@ xcopy /D /Y /E "C:\Users\ReneKarkkainen\GitHub\Website-Tool\vanilla\" "%destinat
 
 cd "%destinationDirectory%"
 
-git init
 git add -A
 git commit -m "Automatic Build Commit"
 
