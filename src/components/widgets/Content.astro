@@ -15,9 +15,9 @@ const {
   items = [],
   columns,
   image = await Astro.slots.render('image'),
+  imageText = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
-
   id,
   isDark = false,
   classes = {},
@@ -85,6 +85,7 @@ const {
                   {...(image as any)}
                 />
               )}
+              <p class="max-w-3xl pt-1 mx-auto sm:text-left text-xs text-muted dark:text-slate-400">{image.desc}</p>
             </div>
           )
         }
