@@ -1,5 +1,5 @@
 site:
-  name: Rene Karkkainen
+  name: Rene Kärkkäinen
   site: 'https://karkkainen.net'
   base: '/'
   trailingSlash: false
@@ -7,14 +7,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Rene Karkkainen
-    template: '%s — Rene Karkkainen'
+    default: Rene Kärkkäinen
+    template: '%s — Rene Kärkkäinen'
   description: "Finnish technology student at Business College Helsinki, with a background at WithSecure, a leading Nordic cyber security company. Skilled in networking, cyber security, web development, and data analysis. Actively seeking opportunities in IT from all over the world to contribute in enhancing system security."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Rene Karkkainen
+    site_name: Rene Kärkkäinen
     type: website
   twitter:
     handle: '@karkkainen_net'
