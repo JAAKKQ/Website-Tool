@@ -10,16 +10,16 @@ if %errorlevel% neq 0 (
 )
 
 REM Set destination directory
-set "destinationDirectory=C:\Users\ReneKarkkainen\GitHub\karkkainen.net"
+set "destinationDirectory=%~dp0..\karkkainen.net"
 
 REM Copy files to destination directory
-xcopy /D /Y /E "C:\Users\ReneKarkkainen\GitHub\Website-Tool\dist\" "%destinationDirectory%"
+xcopy /D /Y /E "%~dp0\dist\" "%destinationDirectory%"
 if %errorlevel% neq 0 (
     echo Failed to copy static files to destination directory.
     exit /b %errorlevel%
 )
 
-xcopy /D /Y /E "C:\Users\ReneKarkkainen\GitHub\Website-Tool\vanilla\" "%destinationDirectory%"
+xcopy /D /Y /E "%~dp0vanilla\" "%destinationDirectory%"
 if %errorlevel% neq 0 (
     echo Failed to copy vanilla files to destination directory.
     exit /b %errorlevel%
