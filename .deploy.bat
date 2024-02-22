@@ -19,12 +19,6 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
-xcopy /D /Y /E "%~dp0vanilla\" "%destinationDirectory%"
-if %errorlevel% neq 0 (
-    echo Failed to copy vanilla files to destination directory.
-    exit /b %errorlevel%
-)
-
 REM Change to destination directory
 cd /d "%destinationDirectory%"
 

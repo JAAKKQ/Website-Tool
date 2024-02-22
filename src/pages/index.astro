@@ -1,13 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-//import Testimonials from '~/components/widgets/Testimonials.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
   title: 'Homepage',
@@ -61,20 +60,20 @@ const metadata = {
     ]}
     image={{
       src: '~/assets/images/Portrait-Hongkong.jpg',
-      alt: 'Image of me at Hong Kong High West Viewing Point',
+      alt: 'Me posing at Hong Kong High West Viewing Point',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h3>
       <p>
-        Welcome to my digital abode! I'm Rene Kärkkäinen, a tech enthusiast and student navigating the ever-evolving
-        landscape of information technology. This platform serves as a hub for insights, experiences, and explorations
-        in the world of technology.
+        Welcome to my digital abode! I'm Rene Kärkkäinen, a tech enthusiast and student navigating the landscape of
+        information technology with a security first mindset. This platform serves as a hub for insights, experiences, and explorations in the world
+        of technology.
       </p>
       <br />
       <p>Thank you for visiting!</p>
       <br />
-      <p>If you're curious to dive deeper, you can follow me:</p>
+      <p>If you're curious to dive deeper, you can follow me on:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -90,19 +89,19 @@ const metadata = {
     items={[
       {
         title:
-          'Information Technology Trainee <br /> <span class="font-normal">WithSecure Oyj, Helsinki, Finland</span> <br /> <span class="text-sm font-normal">Oct - Dec 2023</span>',
+          'Information Technology Trainee | Internship<br> <span class="font-normal">WithSecure Oyj, Helsinki, Finland</span> <br/><span class="text-sm font-normal">Oct - Dec 2023</span>',
         description: ``,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Nursing Home Assistant <br /> <span class="font-normal">City of Helsinki, Helsinki, Finland</span> <br /> <span class="text-sm font-normal">Jun - Jul 2022</span>',
+          'Nursing Home Assistant | Summer Job<br> <span class="font-normal">City of Helsinki, Helsinki, Finland</span> <br /> <span class="text-sm font-normal">Jun - Jul 2022</span>',
         description: `Going for walks with the elderly, playing games together, reading magazines or books, assisting with office work or simply chatting and being present.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Store Assistant <br /> <span class="font-normal">K-Market Rekola, Vantaa, Finland</span> <br /> <span class="text-sm font-normal">Dec 2021</span>',
+          'Store Assistant | Internship<br> <span class="font-normal">K-Market Rekola, Vantaa, Finland</span> <br /> <span class="text-sm font-normal">Dec 2021</span>',
         description: `Selling, unloading and checking shipments, customer service, and keeping the store clean.`,
         icon: 'tabler:briefcase',
       },
@@ -181,29 +180,18 @@ const metadata = {
   <Content
     id="porfolio"
     title="Experiencing with Technology"
-    subtitle="Explore my tech playground, where bugs are features and laughter is the best debugging tool."
+    subtitle=""
     isReversed
     items={[
       {
-        title: 'Description:',
-        description:
-          'Welcome to my Home Lab, a sanctuary for tech exploration and experimentation. From flushing Nokias down the toilet in my early years to now crafting intricate setups, this space is where ideas come to life. Join me as we unravel the mysteries of circuits, codes, and a touch of chaos.',
-      },
-      {
         title: 'What I Learned:',
         description:
-          'Throughout the journey of constructing my Home Lab, I gained valuable insights into networking, server management, and hardware configurations. The art of running servers, understanding how networks work, and the importance of adaptability in the tech landscape were among the many discoveries.',
+          'Throughout the journey of constructing my Home Lab, I gained valuable insights into networking, virtualization, server management, and hardware configurations. The art of running servers, understanding how networks work, and the importance of adaptability in the tech landscape were among the many discoveries.',
       },
     ]}
     image={{
       src: '~/assets/images/server1.png',
       alt: 'Image of my rack server',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '/home-lab',
     }}
   >
     <Fragment slot="content">
@@ -224,25 +212,14 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description:
-          'Dive into the world of my crafted multiplayer FPS game, a creation born out of my love for gaming and the thrill of game development.',
-      },
-      {
         title: 'What I Learned:',
         description:
-          'Crafting this game wasn’t just about shooting enemies; it was a journey into the heart of Unreal Engine, networking challenges, and the magic of multiplayer dynamics.',
+          'This project was a journey into the heart of Unreal Engine, networking challenges, and the magic of multiplayer dynamics.',
       },
     ]}
     image={{
       src: '~/assets/images/videogame.jpg',
       alt: 'Image of the videogame',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '/videogame',
     }}
   >
     <Fragment slot="content">
@@ -263,25 +240,14 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description:
-          'Embark on a journey through my coding ventures, where each line of code tells a story. From crafting intricate algorithms to solving complex challenges, coding is more than just a skill; it’s a canvas for creativity and problem-solving.',
-      },
-      {
         title: 'What I Learned:',
         description:
-          'In the realm of coding, comfort is key. I navigate through languages like Python, JavaScript, C#, HTML and beyond with ease, using them as tools to bring ideas to life. From exploring frameworks and libraries to tackling real-world problems, my coding journey is a continuous exploration of the ever-evolving tech landscape.',
+          'In programming, comfort is key. I navigate through languages like Python, JavaScript, C#, HTML and beyond with ease, using them as tools to bring ideas to life. From exploring frameworks and libraries to tackling real-world problems.',
       },
     ]}
     image={{
       src: '~/assets/images/spaghetti-code.jpg',
       alt: 'A very delicious image of spaghetti.',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '/coding',
     }}
   >
     <Fragment slot="content">
@@ -299,12 +265,21 @@ const metadata = {
 
   <Testimonials
     title="Recomendations"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    subtitle=""
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
+        testimonial: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sequi at sunt non delectus, facere consequatur provident saepe distinctio aliquam minus voluptatum eligendi dolorem fugiat natus nobis quasi, soluta eius?`,
+        name: 'Name',
+        job: 'Title',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sequi at sunt non delectus, facere consequatur provident saepe distinctio aliquam minus voluptatum eligendi dolorem fugiat natus nobis quasi, soluta eius?`,
+        name: 'Name',
+        job: 'Title',
         image: {
           src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Mark Thompson Image',
@@ -327,7 +302,7 @@ const metadata = {
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
+  <!-- BlogLatestPost Widget **************** 
 
   <BlogLatestPosts
     id="blog"
@@ -338,4 +313,5 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts>
+</Layout>-->
 </Layout>

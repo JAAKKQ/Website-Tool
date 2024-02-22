@@ -6,7 +6,7 @@ export const headerData = {
     { text: 'About', href: '/#about' },
     { text: 'Resume', href: '/#resume' },
     { text: 'Porfolio', href: '/#porfolio' },
-    { text: 'Blog', href: '/blog' },
+    { text: 'Projects', href: '/projects' },
     { text: 'Contact', href: '/contact' },
   ],
   actions:[
