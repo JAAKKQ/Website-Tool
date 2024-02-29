@@ -47,6 +47,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   const {
     publishDate: rawPublishDate = new Date(),
     updateDate: rawUpdateDate,
+    hidden,
     title,
     excerpt,
     image,
@@ -70,6 +71,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
     publishDate: publishDate,
     updateDate: updateDate,
+    hidden: hidden,
 
     title: title,
     excerpt: excerpt,
@@ -96,7 +98,7 @@ const load = async function (): Promise<Array<Post>> {
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
+    .filter((post) => !post?.hidden);
 
   return results;
 };

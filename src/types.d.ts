@@ -23,6 +23,8 @@ export interface Post {
   /**  */
   image?: ImageMetadata | string;
 
+  hidden?: boolean;
+
   /**  */
   category?: string;
   /**  */

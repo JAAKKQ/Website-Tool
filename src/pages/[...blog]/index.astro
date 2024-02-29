@@ -30,8 +30,8 @@ const metadata = merge(
     title: post.title,
     description: post.excerpt,
     robots: {
-      index: blogPostRobots?.index,
-      follow: blogPostRobots?.follow,
+      index: blogPostRobots?.index && !post?.hidden,
+      follow: blogPostRobots?.follow && !post?.hidden,
     },
     openGraph: {
       type: 'article',

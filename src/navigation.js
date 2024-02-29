@@ -3,9 +3,6 @@ import { getAsset } from './utils/permalinks';
 export const headerData = {
   links:[
     { text: 'Home', href: '/#' },
-    { text: 'About', href: '/#about' },
-    { text: 'Resume', href: '/#resume' },
-    { text: 'Porfolio', href: '/#porfolio' },
     { text: 'Projects', href: '/projects' },
     { text: 'Contact', href: '/contact' },
   ],
